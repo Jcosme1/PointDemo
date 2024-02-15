@@ -9,7 +9,8 @@ public class NamedPoint extends Point {
     }
     @Override
     public String toString(){
-        //return name + super.toString();
+
+//        return name + super.toString();
         return name + "(" + getX() + ", " + getY() + ")";
     }
 }

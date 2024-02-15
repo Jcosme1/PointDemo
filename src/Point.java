@@ -1,35 +1,26 @@
 public class Point {
-    private double x, y;
+
+    private double x;
+    private double y;
 
     public Point(double x, double y){
         this.x = x;
         this.y = y;
     }
-    public boolean equals (Point pObject){
-//        if (this.x == pObject.x && this.y == pObject.y ){
-//            return true;
-//        }
-//        return false;
-       return (this.x == pObject.x && this.y == pObject.y);
-    }
 
-    public double getX() {
+    public double getX(){
         return x;
     }
 
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
+    public double getY(){
         return y;
     }
-
-    public void setY(double y) {
-        this.y = y;
+    //public double distance(double x1, double y1, double x2, double y2)
+    public static double distance(Point p1 , Point p2){
+        return Math.sqrt(Math.pow(p1.x - p2.x,2) + Math.pow(p1.y - p2.y, 2));
     }
-
+    @Override
     public String toString(){
-        return "(" + x + "," + y + ")";
+        return "(" + getX() +"," +getY() + ")";
     }
 }
